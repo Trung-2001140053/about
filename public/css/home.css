@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* //........ Home ........// */
+
+.home_page img {
+  object-fit: cover;
+  height: 80vh;
+  width: 100%;
+  background-position: center;
+  position: relative;
+  background-size: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.home_txt {
+  position: absolute;
+  top: 37%;
+  left: 5%;
+}
+
+.home_txt p {
+  color: var(--primary-color);
+  font-weight: 600;
+  padding-bottom: 20px;
+  letter-spacing: 1.5px;
+}
+
+.home_txt h2 {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 53px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--light-black);
+}
+
+.home_txt .home_label p {
+  color: grey;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.home_txt a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.home_txt button {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 15px 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.home_txt .bx-right-arrow-alt {
+  font-size: 25px;
+  padding-left: 5px;
+}
+
+.home_txt .home_social_icons a {
+  text-decoration: none;
+  color: var(--light-black);
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+/* Add Product */
+.backgroundShadow {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  display: none;
+}
+
+/* Add */
+.addProduct {
+  width: 450px;
+  background-color: #ece5e5;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 30px;
+  position: fixed;
+  left: 50%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 8px;
+  display: none;
+}
+
+.addProduct form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.addProduct form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.addProduct form .select_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.select_container label {
+  width: 50%;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.select_container select {
+  width: 35%;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.select_container select option {
+  padding: 5px;
+}
+
+.addProduct form button {
+  padding: 20px;
+  transition: all 1s ease;
+  background-color: rgb(98, 143, 98);
+  font-size: 20px;
+  font-weight: bold;
+  border-style: none;
+  border-radius: 10px;
+  color: rgb(240, 227, 203);
+}
+
+.addProduct form button:hover {
+  background-color: rgb(126, 143, 126);
+}
+
+.addProduct form button:hover {
+  cursor: pointer;
+}
+
+/* ------------------------------------------ All clothes ------------------------------------------------------ */
+
+.all_product_heading {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.all_product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 45px 0px;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 50px;
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+
+.eachContainer {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.product_heading {
+  /* padding-left: 150px; */
+  background-color: #ece5e5;
+  display: inline-block;
+  padding: 10px 30px 0;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-bottom: -1px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  place-items: center;
+  gap: 30px 0px;
+  width: 100%;
+  padding: 30px 10px 40px;
+  background-color: #ece5e5;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.container .card {
+  background-color: #c1d0e4;
+  border-radius: 25px;
+  padding: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+.container .product-card {
+  width: 250px;
+  height: 340px;
+  margin: 10px auto 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  cursor: pointer;
+}
+
+.container .product-card .product-header {
+  height: 200px;
+}
+
+.container .product-card .product-header .product-picture {
+  border-radius: 15px;
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  background-size: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.container .product-card .card-details {
+  background-color: rgb(245, 238, 235);
+  border-radius: 15px;
+  padding: 15px;
+  position: absolute;
+  bottom: -10px;
+  width: 102%;
+  left: -0.5%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: bottom 0.5s ease;
+}
+
+.container .product-card .card-details:hover {
+  background-color: rgb(240, 229, 224);
+  bottom: -5px;
+}
+
+.container .product-card .card-details .product-name {
+  font-weight: bold;
+  font-size: 14pt;
+  margin: 0;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fas {
+  margin-right: 1px;
+}
+
+.bottom-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-row .price {
+  font-size: 13pt;
+  margin: 0;
+}
+
+.bottom-row .add-cart {
+  width: 32px;
+  height: 32px;
+  background-image: linear-gradient(
+    120deg,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  font-size: 10pt;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+  .all_product {
+    width: 1300px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .all_product {
+    width: 90vw;
+    padding: 10px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(3, 33.3%);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .all_product {
+    width: 95vw;
+  }
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    grid-template-columns: repeat(3, 33.3%);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .all_product {
+    width: 100vw;
+  }
+  .container {
+    padding: 20px 10px 40px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .all_product {
+    width: 95%;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 50%);
+    padding-bottom: 33px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .addProduct {
+    width: 80%;
+  }
+
+  .addProduct h1 {
+    font-size: 30px;
+  }
+
+  .addProduct form button {
+    padding: 10px;
+  }
+
+  .container .product-card {
+    width: 90%;
+    height: 280px;
+  }
+  .bottom-row {
+    margin-top: 0;
+  }
+
+  .product_heading {
+    font-size: 23px;
+  }
+
+  .container .product-card .product-header {
+    height: 170px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .all_product {
+    padding: 5px;
+  }
+
+  .container .product-card {
+    height: 250px;
+  }
+
+  .container {
+    padding: 5px 2px 20px;
+  }
+
+  .container .product-card .card-details {
+    padding: 10px;
+  }
+
+  .container .product-card .product-header {
+    height: 150px;
+  }
+
+  .container .product-card .card-details .product-name {
+    font-size: 13pt;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .container .product-card {
+    height: 210px;
+  }
+
+  .container .product-card .product-header {
+    height: 130px;
+  }
+
+  .bottom-row .price {
+    font-size: 9pt;
+  }
+
+  .add-cart {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 5pt;
+  }
+}
